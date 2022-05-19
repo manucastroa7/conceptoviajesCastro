@@ -1,0 +1,855 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* CSS del HEADER */
+
+
+/* header {
+    background-color: #206A5D;
+    position: sticky;
+    top: 0px;
+    margin: 0px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+} */
+
+/* grid Area */
+
+.contenedorGrid {
+    display: grid;
+    grid-template-areas:
+        "headerG headerG"
+        "mainG  mainG"
+        "section1 section1"
+        "section2 section3"
+        "footer footer";
+
+}
+
+.girasGrid {
+    height: 70vh;
+    display: grid;
+    grid-template-areas: "headerG headerG"
+        "tituloGiras tituloGiras"
+        "imagenFutbol imagenHockey"
+        "footer footer";
+
+}
+
+.viajesAMedidaGrid {
+    height: 70vh;
+    display: grid;
+    justify-content: center;
+    grid-template-areas: "headerG"
+        "tituloViajes "
+        "grupales"
+        "individuales "
+        "footer";
+}
+
+.nosotrosGrid {
+    height: 70vh;
+    display: grid;
+    justify-content: center;
+    grid-template-areas: "headerG"
+        "mainN"
+        "footer"
+}
+
+.contenedorFutbolGrid {
+    height: 70vh;
+    display: grid;
+    justify-content: center;
+    grid-template-areas: "headerG headerG"
+        "mainGiras mainGiras"
+        "fechasGiras expConcepto"
+        "footer footer";
+}
+
+
+
+.contenedorHockeyGrid {
+    height: 70vh;
+    display: grid;
+    justify-content: center;
+    grid-template-areas: "headerG headerG"
+        "mainGiras mainGiras"
+        "fechasGiras expConcepto"
+        "footer footer";
+}
+
+
+
+
+/* GRID AREA */
+.mainGiras {
+    grid-area: mainGiras;
+}
+
+.fechasGiras {
+    grid-area: fechasGiras;
+}
+
+.experienciasConcepto {
+    grid-area: expConcepto;
+}
+
+.nosotrosM {
+    grid-area: mainN;
+}
+
+.viajesAMedidaMain {
+    grid-area: tituloViajes;
+}
+
+.contenedorGrupales {
+    grid-area: grupales;
+}
+
+
+.contenedorIndividuales {
+    grid-area: individuales;
+}
+
+.mainGirasDep {
+    grid-area: tituloGiras;
+}
+
+.logoFutbol {
+    grid-area: imagenFutbol;
+}
+
+.logoHockey {
+    grid-area: imagenHockey;
+}
+
+.headerGrid {
+    grid-area: headerG;
+}
+
+.mainGrid {
+    grid-area: mainG;
+}
+
+.section1Grid {
+    grid-area: section1;
+}
+
+.section2Grid {
+    grid-area: section2;
+}
+
+.section3Grid {
+    grid-area: section3;
+}
+
+.footerGrid {
+    grid-area: footer;
+}
+
+/* trabajar con flex */
+
+header {
+    background-color: #206A5D;
+    position: sticky;
+    top: 0px;
+    margin: 0px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.iconoMenu {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    z-index: 1;
+
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    margin: 30px;
+    line-height: 2.5rem;
+
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+
+}
+
+
+nav ul li:hover {
+    background-color: #BFDCAE;
+}
+
+nav ul li:hover>ul {
+    display: block;
+}
+
+.subMenu {
+    background-color: #206A5D;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.logoInstagram {
+    margin: 10px;
+}
+
+.logoFacebook {
+
+    margin: 10px;
+}
+
+/* MEDIAQUERIES INDEX */
+
+@media screen and (max-width:600px) {
+
+    header nav {
+        display: none
+    }
+
+
+    .iconoMenu {
+        display: block;
+        background-color: #206A5D;
+
+    }
+
+    .logo {
+        padding-left: 40px;
+    }
+
+    .contenedorGrid {
+        display: grid;
+        grid-template-areas: "headerG"
+            "mainG"
+            "section1"
+            "section2"
+            "section3 "
+            "footer";
+
+    }
+
+    .girasGrid {
+        height: 70vh;
+        display: grid;
+        grid-template-areas: "headerG"
+            "tituloGiras"
+            "imagenFutbol"
+            "imagenHockey"
+            "footer";
+    }
+
+    .contenedorFutbolGrid {
+        height: 70vh;
+        display: grid;
+        justify-content: center;
+        grid-template-areas:   "headerG"
+                                "mainGiras"
+                                "fechasGiras"
+                                "expConcepto"
+                                "footer";
+    }
+
+    
+    .subtituloFutbol{
+        text-align: center;
+    }
+
+    
+    .contenedorFutbol{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+                      
+    }
+
+    .fechasGiras{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .experienciasConcepto {
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .experienciaImagen {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    .parrafoFutbol{
+        margin:20px;
+    }
+    .parrafoGiras {
+        margin:20px;
+    }
+    .imgF {
+        display: flex;
+        margin-bottom: 20px ;
+        margin-left: 100px;
+    }
+
+    .imgF2 {
+        display: flex;
+        margin-left: 100px;
+    }
+
+    .contenedorHockeyGrid {
+        height: 70vh;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-areas:   "headerG"
+                                "mainGiras"
+                                "fechasGiras"
+                                "expConcepto"
+                                "footer";
+    }
+
+    .subtituloHockey{
+        text-align: center;
+    }
+
+    .contenedorHockey{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+                      
+    }
+
+    .parrafoHockey{
+        padding:10px;
+    }
+
+    .imgJ {
+        display: flex;
+        margin-bottom: 20px ;
+        margin-left: 100px;
+    }
+
+    .imgJ2 {
+        display: flex;
+        margin-left: 100px;
+    }
+
+    .nosotrosGrid {
+
+        display: grid;
+        grid-template-areas: "headerG"
+            "mainN"
+            "footer"
+    }
+
+    .nosotros {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        
+    }
+    
+    .grupales {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .subtituloGrupales {
+        text-align: center;
+    }
+
+    .parrafoGrupales {
+        text-align: center;
+    }
+
+    .individuales{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .subtituloIndividuales {
+        text-align: center;
+    }
+
+    .parrafoIndividuales {
+        text-align: center;
+    }
+
+
+
+
+}
+
+
+/* CSS del MAIN */
+
+main {
+    width: 100%;
+    height: auto;
+    background-color: rgb(81, 135, 90);
+    position: relative;
+}
+
+
+.principal {
+    width: 100%;
+    height: 100%;
+    color: white;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.video {
+    margin: 0px;
+    background-color: #5E8B7E;
+}
+
+.principal__titulo {
+    padding: 20px;
+    font-size: 60px;
+    font-family: 'Square Peg', cursive;
+    color: white;
+}
+
+.principal__parrafo {
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+}
+
+/* CSS del Section 1 */
+
+.actividades {
+    background-color: #5E8B7E;
+
+}
+
+.actividades__subtitulo {
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+
+}
+
+.actividades__subtitulo2 {
+
+    margin: 20px;
+    color: white;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.actividades__imagen {
+    margin: 20px;
+    justify-items: center;
+}
+
+
+
+/* CSS del Section 2 */
+.section2 {
+    background-color: #A7C4BC;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+/* CSS del Section 3 */
+.section3 {
+    background-color: #A7C4BC;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.actividades__parrafo {
+    color: white;
+    text-align: center;
+    padding: 20px;
+
+}
+
+/* CSS del FOOTER */
+
+footer {
+    margin: 0px 0px;
+    background-color: #F1F1E8;
+    display: flex;
+    justify-content: space-between
+}
+
+.footerGrid {
+    grid-area: footer;
+}
+
+.footer__imagen {
+    margin: 0px 0px 0px 60px;
+}
+
+.datosContacto {
+    padding: 30px;
+    margin-right: 50px;
+    text-align: right;
+
+}
+
+.datosContacto__subtitulo {
+    color: black;
+    font-size: 14px;
+
+}
+
+.datosContacto__parrafo {
+    color: black;
+    font-size: 12px;
+    list-style-type: none;
+
+
+}
+
+/* CSS FORMULARIO */
+
+.mainFormulario {
+    color: white;
+    padding: 20px;
+    background-color: #5E8B7E;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+}
+
+.tituloFormulario {
+    text-align: left;
+    margin: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+
+}
+
+.formulario {
+    margin: 20px 30px 0px 20px;
+    padding: 0px 0px 0px 0px;
+
+
+}
+
+legend {
+    color: white;
+    margin: 30px;
+}
+
+div label {
+    color: white;
+    margin: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+form input {
+    margin: 20px;
+
+}
+
+.ubicacion {
+    color: white;
+    padding: 20px;
+    background-color: #5E8B7E;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-items: center;
+}
+
+.subtituloUbicacion {
+    margin: 20px;
+    margin-bottom: 10px;
+}
+
+.parrafoUbicacion {
+    margin: 20px;
+}
+
+
+
+/* CSS Nosotros */
+.nosotrosM {
+    background-color: #5E8B7E;
+
+}
+
+.nosotros {
+    color: white;
+    padding: 20px;
+    background-color: #5E8B7E;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.tituloNosotros {
+    text-align: center;
+    margin: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background-color: #5E8B7E;
+
+
+}
+
+.imagenNosotros {
+    display: flex;
+
+}
+
+.parrafoNosotros {
+
+    margin: 20px;
+}
+
+/* CSS Giras Deportivas */
+
+.contenedorGirasDeportivas {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5E8B7E;
+
+}
+
+.tituloGirasDeportivas {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    background-color: #5E8B7E;
+}
+
+.logoFutbol {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.tituloFutbol {
+    position: absolute;
+    color: white;
+
+}
+
+.logoHockey {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.tituloHockey {
+    position: absolute;
+    color: white;
+
+}
+
+/* CSS viajes a medida */
+.viajesAMedida {
+
+    background-color: #5E8B7E;
+}
+
+.grupales {
+    display: flex;
+    background-color: #A7C4BC;
+}
+
+.tituloViajes {
+    text-align: center;
+    padding: 30px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background-color: #5E8B7E;
+}
+
+.viajesAMedidaGrid {
+    background-color: #A7C4BC;
+}
+.subtituloGrupales {
+    
+    margin-left: 10px;
+    padding-top: 40px;
+    /* padding-right: 500px; */
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    padding-bottom: 30px;
+    background-color: #A7C4BC;
+}
+
+.imagenGrupales {
+    margin: 20px;
+
+}
+
+.parrafoGrupales {
+    padding: 0px 50px;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.parrafoGiras {
+    color: white;
+}
+.contenedorIndividuales {
+
+    background-color: #5E8B7E;
+    
+
+}
+
+
+.individuales {
+    display: flex;
+
+}
+
+.subtituloIndividuales {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    color: white;
+    margin-left: 20px;
+
+}
+
+.parrafoIndividuales {
+    color: white;
+    margin: 20px;
+
+}
+
+.imagenIndividuales {
+    margin: 20px;
+
+}
+
+/* CSS Futbol */
+
+.contenedorFutbol {
+    background-color: #A7C4BC;
+    display: flex;
+    justify-content: center;
+}
+
+.subtituloFutbol {
+    color: white;
+    padding: 20px;
+    background-color: #A7C4BC;
+
+}
+
+
+.imagenFutbol2 {
+    margin: 20px;
+}
+
+.parrafoFutbol {
+    margin: 20px;
+    color: white;
+}
+
+
+.fechasGiras {
+    color: white;
+    padding: 20px;
+    background-color: #5E8B7E;
+
+}
+
+.experienciaTitulo {
+    color: white;
+    padding: 20px;
+    background-color: #5E8B7E;
+}
+
+.experienciasConcepto {
+    background-color: #5E8B7E;
+}
+
+.experienciaImagen {
+    display: flex;
+    padding: 20px;
+
+}
+
+.contenedorHockey {
+    background-color: #A7C4BC;
+    display: flex;
+    justify-content: center;
+}
+
+.subtituloHockey {
+    color: white;
+    padding: 20px;
+    background-color: #A7C4BC;
+
+}
+
+.imagenHockey {
+    margin: 20px;
+}
+
+.parrafoHockey {
+    margin: 20px;
+}
