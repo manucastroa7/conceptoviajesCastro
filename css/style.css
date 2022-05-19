@@ -184,6 +184,7 @@ nav ul li a {
     color: white;
     margin: 30px;
     line-height: 2.5rem;
+    border-radius: 35px 35px 35px 35px;
 
 }
 
@@ -217,6 +218,32 @@ nav ul li:hover>ul {
 
     margin: 10px;
 }
+
+.animate__animated.animate__backInDown {
+    --animate-duration: 3s;
+    
+}
+
+.animate__animated.animate__backInleft {
+    --animate-duration: 4s;
+}
+
+.logo {
+    animation-name: logo-crece;
+    animation-duration: 7s;
+}
+
+@keyframes logo-crece {
+    from {
+        transform: scale (1);
+    }    
+
+    to {
+        transform: scale(1.3);
+    }
+}
+
+
 
 /* MEDIAQUERIES INDEX */
 
@@ -262,29 +289,29 @@ nav ul li:hover>ul {
         height: 70vh;
         display: grid;
         justify-content: center;
-        grid-template-areas:   "headerG"
-                                "mainGiras"
-                                "fechasGiras"
-                                "expConcepto"
-                                "footer";
+        grid-template-areas: "headerG"
+            "mainGiras"
+            "fechasGiras"
+            "expConcepto"
+            "footer";
     }
 
-    
-    .subtituloFutbol{
+
+    .subtituloFutbol {
         text-align: center;
     }
 
-    
-    .contenedorFutbol{
+
+    .contenedorFutbol {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
-                      
+
     }
 
-    .fechasGiras{
+    .fechasGiras {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -308,15 +335,18 @@ nav ul li:hover>ul {
         justify-content: center;
         text-align: center;
     }
-    .parrafoFutbol{
-        margin:20px;
+
+    .parrafoFutbol {
+        margin: 20px;
     }
+
     .parrafoGiras {
-        margin:20px;
+        margin: 20px;
     }
+
     .imgF {
         display: flex;
-        margin-bottom: 20px ;
+        margin-bottom: 20px;
         margin-left: 100px;
     }
 
@@ -330,33 +360,33 @@ nav ul li:hover>ul {
         display: grid;
         align-items: center;
         justify-content: center;
-        grid-template-areas:   "headerG"
-                                "mainGiras"
-                                "fechasGiras"
-                                "expConcepto"
-                                "footer";
+        grid-template-areas: "headerG"
+            "mainGiras"
+            "fechasGiras"
+            "expConcepto"
+            "footer";
     }
 
-    .subtituloHockey{
+    .subtituloHockey {
         text-align: center;
     }
 
-    .contenedorHockey{
+    .contenedorHockey {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
-                      
+
     }
 
-    .parrafoHockey{
-        padding:10px;
+    .parrafoHockey {
+        padding: 10px;
     }
 
     .imgJ {
         display: flex;
-        margin-bottom: 20px ;
+        margin-bottom: 20px;
         margin-left: 100px;
     }
 
@@ -379,9 +409,9 @@ nav ul li:hover>ul {
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
-        
+
     }
-    
+
     .grupales {
         display: flex;
         flex-direction: column;
@@ -398,7 +428,7 @@ nav ul li:hover>ul {
         text-align: center;
     }
 
-    .individuales{
+    .individuales {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -413,10 +443,6 @@ nav ul li:hover>ul {
     .parrafoIndividuales {
         text-align: center;
     }
-
-
-
-
 }
 
 
@@ -439,7 +465,8 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    animation: fadeIn;
+    animation-duration: 10s;
 }
 
 .video {
@@ -464,7 +491,11 @@ main {
 
 .actividades {
     background-color: #5E8B7E;
+}
 
+.actividades h2 {
+    animation: bounce;
+    animation-duration: 2s;
 }
 
 .actividades__subtitulo {
@@ -486,14 +517,19 @@ main {
 
 .actividades__imagen {
     margin: 20px;
+    height: 200px;
     justify-items: center;
+}
+
+.actividades__imagen:hover {
+    transform: scale(1.2, 1.2);
 }
 
 
 
 /* CSS del Section 2 */
 .section2 {
-    background-color: #A7C4BC;
+    background: linear-gradient(to bottom, rgba(79, 189, 158, 1) 0%, rgba(177, 199, 193, 1) 51%, rgba(79, 189, 158, 1) 99%, rgba(79, 189, 158, 1) 100%);
     display: flex;
     justify-items: center;
     flex-direction: column;
@@ -504,7 +540,7 @@ main {
 
 /* CSS del Section 3 */
 .section3 {
-    background-color: #A7C4BC;
+    background: linear-gradient(to bottom, rgba(79, 189, 158, 1) 0%, rgba(177, 199, 193, 1) 51%, rgba(79, 189, 158, 1) 99%, rgba(79, 189, 158, 1) 100%);
     display: flex;
     justify-items: center;
     flex-direction: column;
@@ -644,6 +680,8 @@ form input {
     font-family: 'Montserrat', sans-serif;
     color: white;
     background-color: #5E8B7E;
+    animation: backInLeft;
+    animation-duration: 3s;
 
 
 }
@@ -656,6 +694,8 @@ form input {
 .parrafoNosotros {
 
     margin: 20px;
+    animation: fadeIn;
+    animation-duration: 6s;
 }
 
 /* CSS Giras Deportivas */
@@ -675,6 +715,12 @@ form input {
     padding-bottom: 20px;
     color: white;
     background-color: #5E8B7E;
+    
+}
+
+.tituloGirasDeportivas h1{
+    animation: backInLeft;
+    animation-duration: 3s;
 }
 
 .logoFutbol {
@@ -688,6 +734,8 @@ form input {
 .tituloFutbol {
     position: absolute;
     color: white;
+    animation: backInLeft;
+    animation-duration: 3s;
 
 }
 
@@ -702,7 +750,29 @@ form input {
 .tituloHockey {
     position: absolute;
     color: white;
+    animation: backInLeft;
+    animation-duration: 3s;
 
+}
+
+.imgHockeyAnim {
+    height: 300px;
+    transition: height 2s;
+}
+
+.imgHockeyAnim:hover {
+    height: 350px;
+    
+}
+
+.imgFutbolAnim {
+    height: 300px;
+    transition: height 2s;
+}
+
+.imgFutbolAnim:hover {
+    height: 350px;
+    
 }
 
 /* CSS viajes a medida */
@@ -722,13 +792,19 @@ form input {
     font-family: 'Montserrat', sans-serif;
     color: white;
     background-color: #5E8B7E;
+    
+}
+.tituloViajes h1 {
+    animation: backInLeft;
+    animation-duration: 3s;
 }
 
 .viajesAMedidaGrid {
     background-color: #A7C4BC;
 }
+
 .subtituloGrupales {
-    
+
     margin-left: 10px;
     padding-top: 40px;
     /* padding-right: 500px; */
@@ -736,26 +812,39 @@ form input {
     color: white;
     padding-bottom: 30px;
     background-color: #A7C4BC;
+    
+
+}
+
+.subtituloGrupales h2 {
+    animation: backInLeft;
+    animation-duration: 3s;
+/*     animation: fadeIn;
+    animation-duration: 6s; */
 }
 
 .imagenGrupales {
     margin: 20px;
-
 }
 
 .parrafoGrupales {
     padding: 0px 50px;
     color: white;
     padding-bottom: 20px;
+    animation: fadeIn;
+    animation-duration: 6s;
 }
+
+
 
 .parrafoGiras {
     color: white;
 }
+
 .contenedorIndividuales {
 
     background-color: #5E8B7E;
-    
+
 
 }
 
@@ -773,9 +862,16 @@ form input {
 
 }
 
+.subtituloIndividuales h2 {
+    animation: backInLeft;
+    animation-duration: 3s;
+}
+
 .parrafoIndividuales {
     color: white;
     margin: 20px;
+    animation: fadeIn;
+    animation-duration: 6s;
 
 }
 
@@ -814,6 +910,8 @@ form input {
     color: white;
     padding: 20px;
     background-color: #5E8B7E;
+    animation: backInLeft;
+    animation-duration: 3s;
 
 }
 
@@ -821,6 +919,8 @@ form input {
     color: white;
     padding: 20px;
     background-color: #5E8B7E;
+    animation: backInLeft;
+    animation-duration: 3s;
 }
 
 .experienciasConcepto {
