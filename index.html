@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- link de bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
     <!-- link del CSS -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -27,7 +31,7 @@
 </head>
 
 <body class="contenedorGrid">
-    <header class="headerGrid">
+    <!-- <header class="headerGrid">
 
         <div class="iconoMenu">
             <a href="index.html"><img src="img/iconoMenu.png" alt="icono Menu" width="80px">
@@ -77,56 +81,118 @@
                     alt="Logo Facebook" width="30" height="30"></a>
         </div>
 
-    </header>
+    </header> -->
 
-    <main class="mainGrid">
+    <div class="container">
+        <header class="row">
 
-        <div class="principal">
-            <h1 class="principal__titulo">Comprendemos el valor de la Experiencia</h1>
-            <p class="principal__parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus rerum
-                perferendis excepturi quas minus,
-                quo
-                consequatur eligendi quasi eius voluptas totam cum sequi, quidem eveniet perspiciatis, accusamus soluta
-                beatae vero!</p>
-        </div>
+            <!-- menu bootstrap -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <!-- logo -->
+                    <a class="navbar-brand" href="#">
+                        <img src="img/LogoConcepto.png" alt="" width="100" height="100">
+                    </a>
 
-        <!-- video -->
-        <div class="video">
-            <iframe width="100%" height="663px" src="https://www.youtube.com/embed/2HKNHitShIg"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        </div>
-    </main>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-    <!-- Subtitulo -->
-    <section class="section1Grid">
-        <div class="actividades">
-            <h2 class="actividades__subtitulo">¿Qué hacemos?</h2>
-        </div>
-    </section>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/nosotros.html">Nosotros</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="pages/girasdeportivas.html"
+                                    id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Giras Deportivas
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="pages/futbol.html">Futbol</a></li>
+                                    <li><a class="dropdown-item" href="pages/hockey.html">Hockey</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/viajesamedida.html">Viajes a Medida</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
 
-    <section class="section2Grid">
-        <div class="section2">
-            <h2 class="actividades__subtitulo2">Giras deportivas</h2>
-            <img class="actividades__imagen" src="img/GirasTorneoFemenino.jpg" alt="Giras Deportivas" >
-            <p class="actividades__parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque voluptate
-                eveniet cupiditate accusamus
-                perferendis facilis porro doloribus, corrupti vel quisquam minima, ex maiores incidunt amet mollitia
-                repellendus esse distinctio nobis?</p>
-        </div>
-    </section>
+                    <div>
+                        <a class="navbar-brand" href="https://www.instagram.com" target="_blank">
+                        <img src="img/LogoInstagram.png" alt="" width="20" height="20">
+                        </a>
 
-    <section class="section3Grid">
-        <div class="section3">
-            <h2 class="actividades__subtitulo2"> Viajes Individuales</h2>
-            <img class="actividades__imagen" src="img/ViajesAMedida.jpeg" alt="Viajes a Medida">
-            <p class="actividades__parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque voluptate
-                eveniet cupiditate accusamus
-                perferendis facilis porro doloribus, corrupti vel quisquam minima, ex maiores incidunt amet mollitia
-                repellendus esse distinctio nobis?</p>
-        </div>
-        </div>
+                        <a class="navbar-brand" href="https://www.facebook.com" target="_blank">
+                        <img src="img/LogoFacebook.png" alt="" width="20" height="20">
+                        </a>
+                    </div>
+
+
+                </div>
+            </nav>
+
+        </header>
+
+        <main class="mainGrid">
+
+            <div class="principal">
+                <h1 class="principal__titulo">Comprendemos el valor de la Experiencia</h1>
+                <p class="principal__parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus rerum
+                    perferendis excepturi quas minus,
+                    quo
+                    consequatur eligendi quasi eius voluptas totam cum sequi, quidem eveniet perspiciatis, accusamus
+                    soluta
+                    beatae vero!</p>
+            </div>
+
+            <!-- video -->
+            <div class="video">
+                <iframe width="100%" height="663px" src="https://www.youtube.com/embed/2HKNHitShIg"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </main>
+
+        <!-- Subtitulo -->
+        <section class="section1Grid">
+            <div class="actividades">
+                <h2 class="actividades__subtitulo">¿Qué hacemos?</h2>
+            </div>
+        </section>
+
+        <section class="section2Grid">
+            <div class="section2">
+                <h2 class="actividades__subtitulo2">Giras deportivas</h2>
+                <img class="actividades__imagen" src="img/GirasTorneoFemenino.jpg" alt="Giras Deportivas">
+                <p class="actividades__parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+                    voluptate
+                    eveniet cupiditate accusamus
+                    perferendis facilis porro doloribus, corrupti vel quisquam minima, ex maiores incidunt amet mollitia
+                    repellendus esse distinctio nobis?</p>
+            </div>
+        </section>
+
+        <section class="section3Grid">
+            <div class="section3">
+                <h2 class="actividades__subtitulo2"> Viajes Individuales</h2>
+                <img class="actividades__imagen" src="img/ViajesAMedida.jpeg" alt="Viajes a Medida">
+                <p class="actividades__parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+                    voluptate
+                    eveniet cupiditate accusamus
+                    perferendis facilis porro doloribus, corrupti vel quisquam minima, ex maiores incidunt amet mollitia
+                    repellendus esse distinctio nobis?</p>
+            </div>
+    </div>
     </section>
 
     <footer class="footerGrid">
@@ -139,6 +205,11 @@
             </ul>
         </div>
     </footer>
+
+    <!-- link de js de bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
